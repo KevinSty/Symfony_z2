@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Profil joueur
+{% endblock %}
+
+{% block body %}
+    <a href="{{ path('list_player') }}">Retour</a><br>
+
+    Page de profil de {{ player.name }}
+
+<ul>
+    {% for item in items %}
+        <li>position : {{ item.position }} ; item : {{ item.item.name }} ; type de litem : {{ item.item.typeItem }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
